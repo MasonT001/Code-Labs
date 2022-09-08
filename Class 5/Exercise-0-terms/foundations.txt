@@ -1,0 +1,7 @@
+1. Data types are different values and items you can use to perform things
+
+2. Operators are used for putting together or comparing multiple data types
+
+3. Conditional statements are things like "if" which are used to execute a block of code if a single condition is multiple
+
+4. Loops are used similar to "if" statements but loops execute blocks of code continually until a certain condtiion is met.
