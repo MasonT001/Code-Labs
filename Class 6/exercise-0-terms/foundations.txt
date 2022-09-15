@@ -1,0 +1,3 @@
+Objects are key value groups
+Functions are a block of code that can be executed when called to
+Built in methods such as document are common actions that you have access to no matter what
