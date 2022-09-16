@@ -1,0 +1,2 @@
+DOM is the Document Object Model
+Event listeners are a module you can use from the DOM
