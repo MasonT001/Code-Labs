@@ -1,0 +1,21 @@
+.body {
+    background-color: black;
+    
+}
+
+.pop{
+    text-align: center;
+    color: aqua;
+}
+
+.header-text{
+    color: aqua;
+    text-align: center;
+    font-size: 50px;
+}
+
+.img{
+    max-width: 300px;
+    max-height: 200px;
+    justify-content: center;
+}
