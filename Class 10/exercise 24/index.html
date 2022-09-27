@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+        let str = "I am 10. My address is 1112 Some Str."
+
+        function countNumbersInSentence(str){
+            return str.replace(/[^0-9]/g, '').length
+        }
+
+        console.log(countNumbersInSentence('12hello34'))
+        console.log(countNumbersInSentence('12hello34589387989575'))
+
+    </script>
+</body>
+</html>

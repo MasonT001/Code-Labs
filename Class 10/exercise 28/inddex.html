@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+
+        function sumFinder(arr, num) {
+            let obj = {}
+            let diff
+
+            for (let i = 0; i < arr.length; i++) {
+                diff = num - arr[i]
+
+                if (obj[diff]){
+                    return true
+                }else{
+                    obj[arr[i]] = true
+                }
+            }
+            return false
+        }
+
+        let sumFinderResult = sumFinder([6,4,3,2], 7)
+
+        let anotherSumFinderResult = sumFinder([6,4,3,2], 7)
+
+        console.log(sumFinderResult)
+        
+
+        console.log(sumFinder([9,5,6,4,3,2], 14))
+    </script>
+</body>
+</html>
