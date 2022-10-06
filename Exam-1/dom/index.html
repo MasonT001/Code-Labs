@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        post = {
+            title: "The Ancient Civilization of Rome",
+            description: "In modern historiography, ancient Rome refers to Roman civilization from the founding of the city of Rome in the 8th century bc to the collapse of the Western Rooman Empire in the 5th century AD it encompasses the Roman Kingdom, Roman Republic, and the Roman Empire until the fall of the Western Empire "
+        }
+
+        header = document.createElement('h1')
+        para = document.createElement('p')
+
+        header.innerText = `${post.title}`
+        para.innerText = `${post.description}`
+
+        document.body.appendChild(header)
+        document.body.appendChild(para)
+
+    </script>
+    
+</body>
+</html>
