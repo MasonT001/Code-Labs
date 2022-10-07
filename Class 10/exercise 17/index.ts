@@ -1,4 +1,4 @@
-let schooll : {
+ let schooll : {
     students: number;
     classroom: number;
     teachers: number;

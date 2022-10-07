@@ -6,15 +6,28 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tasks.component.css']
 })
 export class TasksComponent implements OnInit {
-  tasks = [{}]
+  public items = [];
+
+  public newTask;
+
+  public addToList() {
+    if (this.newTask == ''){
+
+    }else {
+      this.items.push(this.newTask)
+      this.newTask = ''
+    }
+  }
+
+  public deleteTask(index) {
+    this.items.splice(index, 1)
+  }
 
   constructor() { }
 
   ngOnInit(): void {}
 
   createTask(){}
-
-  deleteTask(){}
 
   markCompleted(){}
 
