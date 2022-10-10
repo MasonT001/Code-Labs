@@ -1,22 +1,21 @@
 class Animal {
     name: string = ''
     age: number = 0
-    location: string = ''
+    location: Region = new Region()
 }
 
-class Locationn {
+class Region {
     name: string = ''
 }
 
-let place = new Locationn()
+let place = new Region()
 place.name = 'Africa'
 
 let animal = new Animal()
 animal.name = 'Johnny The Lion'
 animal.age = 5
-animal.location = 'Africa'
+animal.location = place
 
-console.log(place.name)
 console.log(animal.name)
 console.log(animal.age)
 console.log(animal.location)

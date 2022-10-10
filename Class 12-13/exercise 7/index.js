@@ -2,22 +2,22 @@ var Animal = /** @class */ (function () {
     function Animal() {
         this.name = '';
         this.age = 0;
-        this.location = '';
+        this.location = new Region();
     }
     return Animal;
 }());
-var Locationn = /** @class */ (function () {
-    function Locationn() {
+var Region = /** @class */ (function () {
+    function Region() {
         this.name = '';
     }
-    return Locationn;
+    return Region;
 }());
-var place = new Locationn();
+var place = new Region();
 place.name = 'Africa';
 var animal = new Animal();
 animal.name = 'Johnny The Lion';
 animal.age = 5;
-animal.location = 'Africa';
+animal.location = place;
 console.log(place.name);
 console.log(animal.name);
 console.log(animal.age);
