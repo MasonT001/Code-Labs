@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-input',
-  template: `
-    <input>
-    <button>Save</button>
-    <p>The title is: {{title}}</p>
+   template: `
+     <input [value]="title" (keyup.enter)="changeTitle($event.target.value)" #inputElement>
+     <button (click)="changeTitle(inputElement.value)">Save</button>
+     <p>The title is: {{title}}</p>
   `,
   styleUrls: ['./input.component.css']
 })
@@ -19,7 +20,7 @@ export class InputComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  changeTitle(newTitle: string){
+  changeTitle(newTitle: string): void{
     this.title = newTitle;
   }
 

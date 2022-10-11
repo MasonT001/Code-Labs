@@ -8,9 +8,23 @@ import { Component } from '@angular/core';
     </h1>
 
     <app-input></app-input>
+    <ul>
+       <li *ngFor="let item of todoList">
+       {{item.title}}
+       </li>
+    </ul>
   `,
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = "To Do List"
+
+  todoList = [
+    {title: 'install NodeJs'},
+    {title: 'Angular CLI'},
+    {title: 'create new app'},
+    {title: 'serve app'},
+    {title: 'develop app'},
+    {title: 'deploy app'}
+  ]
 }
