@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -11,17 +11,17 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./input.component.css']
 })
 export class InputComponent implements OnInit {
+  @Output() submit: EventEmitter<string> = new EventEmitter();
+  
   title: string = '';
 
-  constructor() { 
-    this.changeTitle('My First Angular App')
-  }
+  constructor() { }
 
   ngOnInit(): void {
   }
 
   changeTitle(newTitle: string): void{
-    this.title = newTitle;
+    this.submit.emit(newTitle);
   }
 
 }
