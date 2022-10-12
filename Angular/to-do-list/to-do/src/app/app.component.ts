@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  // title = "To Do List"
+   title = "To Do List"
 
   // todoList = [
   //   {title: 'install NodeJs'},

@@ -1,9 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { TodoListService } from '../todo-list.service';
 
 @Component({
   selector: 'app-list-manager',
-  template: ` <h1>
-  Welcome to {{title}}!
+  template: ` 
+  <div class="todo-app">
+  <h1>
+  {{title}}
   </h1>
 
   <app-input (submit)="addItem($event)"></app-input>
@@ -12,29 +15,24 @@ import { Component, OnInit } from '@angular/core';
      <app-item [todoItem]="item"></app-item>
      </li>
   </ul>
+  </div>
 `,
   styleUrls: ['./list-manager.component.css']
 })
 export class ListManagerComponent implements OnInit {
 
-  constructor() { }
+  constructor(private todoListService:TodoListService) { }
 
   ngOnInit(): void {
+    this.todoList = this.todoListService.getTodoList()
   }
 
-  title = 'todo';
+  title = 'To-Do List';
 
-  todoList = [
-    {title: 'install NodeJs'},
-    {title: 'Angular CLI'},
-    {title: 'create new app'},
-    {title: 'serve app'},
-    {title: 'develop app'},
-    {title: 'deploy app'}
-  ]
+  todoList;
 
-  addItem(title: string): void {
-    this.todoList.push({ title })
+  addItem(title): void {
+    this.todoList = this.todoListService.addItem({title})
   }
 
 }

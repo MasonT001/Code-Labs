@@ -6,6 +6,8 @@ import { InputComponent } from './input/input.component';
 import { FormsModule } from '@angular/forms';
 import { ItemComponent } from './item/item.component';
 import { ListManagerComponent } from './list-manager/list-manager.component';
+import { TodoListService } from './todo-list.service';
+import { ToDoListStorageService } from './todo-list-storage.service';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,7 @@ import { ListManagerComponent } from './list-manager/list-manager.component';
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [TodoListService, ToDoListStorageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -4,9 +4,8 @@ import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-input',
    template: `
-     <input [value]="title" (keyup.enter)="changeTitle($event.target.value)" #inputElement>
-     <button (click)="changeTitle(inputElement.value)">Save</button>
-     <p>The title is: {{title}}</p>
+     <input class="app-input"[value]="title" (keyup.enter)="changeTitle($event.target.value)" #inputElement>
+     <button class="btn"(click)="changeTitle(inputElement.value)">&plus;</button>
   `,
   styleUrls: ['./input.component.css']
 })
