@@ -6,16 +6,18 @@ import { ToDoListStorageService } from "./todo-list-storage.service";
 
 export class TodoListService {
 
-    private todoList;
-
     constructor(private storage:ToDoListStorageService) { }
 
       getTodoList(){
-        return this.todoList
+        return this.storage.get()
       }
 
-      addItem(item): void {
-        this.todoList.push(item)
+      addItem(item) {
+        return this.storage.post(item)
+      }
+
+      removeItem(item) {
+        return this.storage.destroy(item)
       }
 
 }

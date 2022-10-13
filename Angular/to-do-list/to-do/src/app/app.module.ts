@@ -8,17 +8,19 @@ import { ItemComponent } from './item/item.component';
 import { ListManagerComponent } from './list-manager/list-manager.component';
 import { TodoListService } from './todo-list.service';
 import { ToDoListStorageService } from './todo-list-storage.service';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
     AppComponent,
     InputComponent,
     ItemComponent,
-    ListManagerComponent
+    ListManagerComponent,
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    CommonModule
   ],
   providers: [TodoListService, ToDoListStorageService],
   bootstrap: [AppComponent]

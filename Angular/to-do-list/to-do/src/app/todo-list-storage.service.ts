@@ -21,7 +21,7 @@ export class ToDoListStorageService {
 
     constructor() {
         this.todoList = JSON.parse(localStorage.getItem(storageName)) || defaultItems
-        
+
      }
 
      get() {
@@ -30,7 +30,7 @@ export class ToDoListStorageService {
 
      post(item) {
         this.todoList.push(item)
-        return this.get()
+        return this.update()
      }
 
      put(item, changes) {
