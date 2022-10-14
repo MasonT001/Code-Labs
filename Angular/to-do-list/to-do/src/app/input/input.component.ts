@@ -1,9 +1,9 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-input',
    template: `
-     <input class="app-input"[value]="title" (keyup.enter)="changeTitle($event.target.value)" #inputElement>
+     <input class="app-input"[value]="title" (keyup.enter)="changeTitle($event.target.value)" #inputElement placeholder="Add New Task...">
      <button class="btn"(click)="changeTitle(inputElement.value)">&plus;</button>
   `,
   styleUrls: ['./input.component.css']

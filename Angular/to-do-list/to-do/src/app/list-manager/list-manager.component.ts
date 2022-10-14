@@ -5,9 +5,7 @@ import { TodoListService } from '../todo-list.service';
   selector: 'app-list-manager',
   template: ` 
   <div class="todo-app">
-    <h1>
-    {{ title }}
-    </h1>
+    <h1> {{ title }} </h1>
 
     <app-input (submit)="addItem($event)"></app-input>
       <ul>
